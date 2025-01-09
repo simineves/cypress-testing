@@ -1,0 +1,6 @@
+{
+  "browsers": {
+    "chromeWebSecurity": false,
+    "experimentalSourceRewriting": true
+  }
+}

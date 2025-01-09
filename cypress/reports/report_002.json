@@ -1,0 +1,239 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-25T23:57:04.370Z",
+    "end": "2024-10-25T23:57:36.777Z",
+    "duration": 32407,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "caae6381-14c4-4f2b-8cea-019d356f663c",
+      "title": "",
+      "fullFile": "cypress/E2E/SmokeTest/matchPage/preMatchPage.cy.js",
+      "file": "cypress/E2E/SmokeTest/matchPage/preMatchPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e7f9854d-8ae5-4c24-a45e-74167238f014",
+          "title": "Pre Match Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "fab50736-2185-423d-8a0f-71dbcf8e6633",
+              "title": "Pre Match Stats for https://www.mlssoccer.com/competitions/mls-cup-playoffs-cup-short/2024/matches/miavsatl-10-25-2024",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Should display Match Up History component",
+                  "fullTitle": "Pre Match Page Pre Match Stats for https://www.mlssoccer.com/competitions/mls-cup-playoffs-cup-short/2024/matches/miavsatl-10-25-2024 Should display Match Up History component",
+                  "timedOut": null,
+                  "duration": 4062,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.matchUpHistoryComponent({\n  teams\n});",
+                  "err": {},
+                  "uuid": "c1f8bc17-b228-4dc0-9dea-c2ff2b7a5662",
+                  "parentUUID": "fab50736-2185-423d-8a0f-71dbcf8e6633",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Should display Pre Match Stats Comparison component",
+                  "fullTitle": "Pre Match Page Pre Match Stats for https://www.mlssoccer.com/competitions/mls-cup-playoffs-cup-short/2024/matches/miavsatl-10-25-2024 Should display Pre Match Stats Comparison component",
+                  "timedOut": null,
+                  "duration": 3690,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.preMatchStatsComparisonComponent({\n  teams\n});",
+                  "err": {},
+                  "uuid": "652bdd00-a648-4828-a55b-990a557e5a10",
+                  "parentUUID": "fab50736-2185-423d-8a0f-71dbcf8e6633",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Should display Match Facts component",
+                  "fullTitle": "Pre Match Page Pre Match Stats for https://www.mlssoccer.com/competitions/mls-cup-playoffs-cup-short/2024/matches/miavsatl-10-25-2024 Should display Match Facts component",
+                  "timedOut": null,
+                  "duration": 3469,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.matchFactsComponent({\n  teams\n});",
+                  "err": {},
+                  "uuid": "5b101ad2-9d11-4a56-8d76-4a2217a0731c",
+                  "parentUUID": "fab50736-2185-423d-8a0f-71dbcf8e6633",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Should display Match Hub Header component",
+                  "fullTitle": "Pre Match Page Pre Match Stats for https://www.mlssoccer.com/competitions/mls-cup-playoffs-cup-short/2024/matches/miavsatl-10-25-2024 Should display Match Hub Header component",
+                  "timedOut": null,
+                  "duration": 5011,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.matchHubHeaderComponent({\n  teams\n});",
+                  "err": {},
+                  "uuid": "5fb5ce92-e9b2-49ca-a1db-676f76ba23db",
+                  "parentUUID": "fab50736-2185-423d-8a0f-71dbcf8e6633",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Should display Vertical Scoreboard component",
+                  "fullTitle": "Pre Match Page Pre Match Stats for https://www.mlssoccer.com/competitions/mls-cup-playoffs-cup-short/2024/matches/miavsatl-10-25-2024 Should display Vertical Scoreboard component",
+                  "timedOut": null,
+                  "duration": 4954,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.verticalScoreboardComponent({\n  teams\n});",
+                  "err": {},
+                  "uuid": "c39cc820-920e-43f7-83c7-d470fa888461",
+                  "parentUUID": "fab50736-2185-423d-8a0f-71dbcf8e6633",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Should display Match Tickets component",
+                  "fullTitle": "Pre Match Page Pre Match Stats for https://www.mlssoccer.com/competitions/mls-cup-playoffs-cup-short/2024/matches/miavsatl-10-25-2024 Should display Match Tickets component",
+                  "timedOut": null,
+                  "duration": 3480,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.matchTicketsComponent({\n  teams\n});",
+                  "err": {},
+                  "uuid": "af886ffb-f28b-458a-8d5a-c0ba5819c678",
+                  "parentUUID": "fab50736-2185-423d-8a0f-71dbcf8e6633",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Should display Lineups component",
+                  "fullTitle": "Pre Match Page Pre Match Stats for https://www.mlssoccer.com/competitions/mls-cup-playoffs-cup-short/2024/matches/miavsatl-10-25-2024 Should display Lineups component",
+                  "timedOut": null,
+                  "duration": 5609,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('a[href=\"lineups\"]').click();\ncy.lineupsComponent({\n  teams\n});",
+                  "err": {},
+                  "uuid": "87546688-bc3e-44c6-9e1f-4ae35ac86c74",
+                  "parentUUID": "fab50736-2185-423d-8a0f-71dbcf8e6633",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c1f8bc17-b228-4dc0-9dea-c2ff2b7a5662",
+                "652bdd00-a648-4828-a55b-990a557e5a10",
+                "5b101ad2-9d11-4a56-8d76-4a2217a0731c",
+                "5fb5ce92-e9b2-49ca-a1db-676f76ba23db",
+                "c39cc820-920e-43f7-83c7-d470fa888461",
+                "af886ffb-f28b-458a-8d5a-c0ba5819c678",
+                "87546688-bc3e-44c6-9e1f-4ae35ac86c74"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 30275,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

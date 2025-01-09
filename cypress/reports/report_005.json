@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-26T01:07:08.658Z",
+    "end": "2024-10-26T01:07:16.016Z",
+    "duration": 7358,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "13daafe0-a45e-40d3-9e9c-fad9c1129aef",
+      "title": "",
+      "fullFile": "cypress/E2E/SmokeTest/01-live-test-prep.cy.js",
+      "file": "cypress/E2E/SmokeTest/01-live-test-prep.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3cd63e7b-2f5d-4641-a789-0ef6fd097eca",
+          "title": "Live Match Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adding Live Matches URL in Json file for today's matches",
+              "fullTitle": "Live Match Page Tests Adding Live Matches URL in Json file for today's matches",
+              "timedOut": null,
+              "duration": 5873,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const todayString = getTodayString(); // Get today's date\ncy.visit(`${webAppBaseURL}/schedule/scores`);\ncy.wait(5000);\ncy.get(\".mls-c-schedule__matches\").then(schedule => {\n  if (schedule.find('div[class*=\"mls-c-match-tile --live\"]').length > 0) {\n    cy.get('div[class*=\"mls-c-match-tile --live\"]').each($div => {\n      const liveMatchLink = $div.parent(\"a\").prop(\"href\");\n      if (liveMatchLink) {\n        const matchInfo = getTeamsAndDateFromURL(liveMatchLink);\n        if (matchInfo && matchInfo.MatchDate === todayString) {\n          liveMatchURLs.push(liveMatchLink);\n        }\n      }\n    });\n  } else {\n    cy.log(\"No live matches found.\");\n  }\n  const liveMatchObj = {\n    liveMatchURLs\n  };\n  cy.writeFile(\"MLS_LIVE_SMOKE_TEST_URLS.json\", liveMatchObj);\n  cy.log(`liveMatchURLs array written to: MLS_LIVE_SMOKE_TEST_URLS.json`);\n});",
+              "err": {},
+              "uuid": "788a646f-abf3-4a83-a934-804ec6d2911d",
+              "parentUUID": "3cd63e7b-2f5d-4641-a789-0ef6fd097eca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "788a646f-abf3-4a83-a934-804ec6d2911d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5873,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

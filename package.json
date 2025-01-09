@@ -1,0 +1,36 @@
+{
+  "name": "MLS-WebApp",
+  "version": "1.0.0",
+  "description": "MLS WebApp E2E Automation Test using Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test:prod-report": "npx cypress run  --headed --browser chrome --config-file ./cypress.mls.config.js",
+    "test:prod-report-headless": "npx cypress run --config-file ./cypress.mls.config.js",
+    "test:prod": "npx cypress open --config-file ./cypress.mls.config.js",
+    "test:cli-prod": "npx cypress open --record --key 7e187f6c-0256-415b-bcc1-dcae95d9b00a --browser chrome --spec 'cypress/E2E' --config-file ./cypress.mls.config.js",
+    "livetest": "node scripts/livetest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "TechOps",
+  "license": "ISC",
+  "devDependencies": {
+    "@bahmutov/cy-api": "^2.2.6",
+    "@faker-js/faker": "^7.6.0",
+    "chai": "^4.3.7",
+    "cross-env": "^7.0.3",
+    "cypress": "13.13.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "mochawesome": "^7.1.3"
+  },
+  "dependencies": {
+    "@cypress/grep": "^4.0.1",
+    "cypress-plugin-api": "^2.11.1",
+    "minimist": "^1.2.8",
+    "mocha": "^10.3.0",
+    "randomatic": "^3.1.1",
+    "xml2js": "^0.6.2"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-25T23:52:44.606Z",
+    "end": "2024-10-25T23:52:52.224Z",
+    "duration": 7618,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "88782888-b165-439f-820a-7edd0946372b",
+      "title": "",
+      "fullFile": "cypress/E2E/SmokeTest/01-test-prep.cy.js",
+      "file": "cypress/E2E/SmokeTest/01-test-prep.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "40f9f8a7-e1df-43e4-b182-e5ba2000a22c",
+          "title": "Pre and Post Match Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adding Pre and Post Matches URL in Json file",
+              "fullTitle": "Pre and Post Match Page Tests Adding Pre and Post Matches URL in Json file",
+              "timedOut": null,
+              "duration": 5946,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${webAppBaseURL}/schedule/scores`);\ncy.wait(5000);\nconst today = new Date();\nconst todayString = today.toISOString().split(\"T\")[0];\ncy.get(\".mls-c-schedule__matches\").then(schedule => {\n  if (schedule.find('div[class*=\"mls-c-match-tile --post\"]').length > 0) {\n    cy.get('div[class*=\"mls-c-match-tile --post\"]').each($div => {\n      const postMatchLink = $div.parent(\"a\").prop(\"href\");\n      if (postMatchLink) {\n        const matchInfo = getTeamsAndDateFromURL(postMatchLink);\n        if (matchInfo && matchInfo.MatchDate === todayString) {\n          postMatchURLs.push(postMatchLink);\n        }\n      }\n    });\n  } else {\n    cy.log('No elements with class containing \"mls-c-match-tile --post\" found.');\n  }\n  const postMatchObj = {\n    postMatchURLs\n  };\n  cy.writeFile(\"MLS_SMOKE_TEST_URLS.json\", postMatchObj);\n  cy.log(`postMatchURLs array written to: MLS_SMOKE_TEST_URLS.json`);\n});\ncy.get(\".mls-c-schedule__matches\").then(schedule => {\n  if (schedule.find('div[class*=\"mls-c-match-tile --pre\"]').length > 0) {\n    cy.get('div[class*=\"mls-c-match-tile --pre\"]').each($div => {\n      const preMatchLink = $div.parent(\"a\").prop(\"href\");\n      if (preMatchLink) {\n        const matchInfo = getTeamsAndDateFromURL(preMatchLink);\n        if (matchInfo && matchInfo.MatchDate === todayString) {\n          preMatchURLs.push(preMatchLink);\n        }\n      }\n    });\n  } else {\n    cy.log('No elements with class containing \"mls-c-match-tile --pre\" found.');\n  }\n  const tempUrlsObj = {\n    postMatchURLs,\n    preMatchURLs\n  };\n  cy.writeFile(\"MLS_SMOKE_TEST_URLS.json\", tempUrlsObj);\n  cy.log(`preMatchURLs array written to: MLS_SMOKE_TEST_URLS.json`);\n});",
+              "err": {},
+              "uuid": "a688621e-7be2-4935-8fc9-c3b531125cae",
+              "parentUUID": "40f9f8a7-e1df-43e4-b182-e5ba2000a22c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a688621e-7be2-4935-8fc9-c3b531125cae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5946,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
